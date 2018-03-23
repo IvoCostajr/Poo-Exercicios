@@ -1,0 +1,39 @@
+package PraticandoHeranca;
+
+public class Gerente extends Funcionario {
+	private int senha;
+	private int numFuncionariosGerenciados;
+
+	public Gerente(String nome, int idade, int cpf, double salario, int senha, int numFuncionarioGerenciado) {
+		super(nome, idade, cpf, salario);
+		this.senha = senha;
+		this.numFuncionariosGerenciados = numFuncionarioGerenciado;
+	}
+
+	public boolean autentica(int senha) {
+		if (this.senha == senha) {
+			return true;
+
+		} else {
+			return false;
+		}
+	}
+
+	public int getSenha() {
+		return senha;
+	}
+
+	public void setSenha(int senha) {
+		this.senha = senha;
+	}
+
+	public int getNumFuncionariosGerenciados() {
+		return numFuncionariosGerenciados;
+	}
+
+	public void setNumFuncionariosGerenciados(int numFuncionariosGerenciados) {
+		this.numFuncionariosGerenciados = numFuncionariosGerenciados;
+	}
+	
+	
+}
